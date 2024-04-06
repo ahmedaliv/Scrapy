@@ -1,5 +1,5 @@
 import re
-from renthousescraper.items import RenthousescraperItem
+from renthousescraper.items import RentalItem
 import scrapy
 
 
@@ -37,7 +37,7 @@ class RenthousespiderSpider(scrapy.Spider):
 
     def parse_property(self, response):
         # Extract data from the property page
-        item = RenthousescraperItem()
+        item = RentalItem()
             # Extracting address details
         address_lines = response.css('.object-address-line')
 
